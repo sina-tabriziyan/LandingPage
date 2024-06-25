@@ -9,6 +9,8 @@ import com.varabyte.kobweb.core.Page
 import org.jetbrains.compose.web.dom.Text
 import com.varabyte.kobweb.worker.rememberWorker
 import com.sina.web.worker.EchoWorker
+import com.varabyte.kobweb.compose.foundation.layout.Arrangement
+import com.varabyte.kobweb.compose.foundation.layout.Column
 
 @Page
 @Composable
@@ -18,8 +20,17 @@ fun HomePage() {
         worker.postInput("Hello, worker!")
     }
 
-    // TODO: Replace the following with your own content
-    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Text("THIS PAGE INTENTIONALLY LEFT BLANK")
+
+
+
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Top,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        // TODO: Replace the following with your own content
+        Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+            Text("THIS PAGE INTENTIONALLY LEFT BLANK")
+        }
     }
 }
